@@ -13,7 +13,21 @@ public class DaysInMonth {
                 System.out.println("31");
                 break;
             case (2):
-                System.out.println("28");
+                if (year > 0)  {
+                    if (year % 100== 0) {
+                        if (year % 400 == 0) {
+                            System.out.println("29");
+                        }else {
+                            System.out.println("28");
+                        }
+                    } else if (year % 4== 0) {
+                        System.out.println("29");
+                    } else {
+                        System.out.println("28");
+                    }
+                } else{
+                    System.out.println("invalid date");
+                }
                 break;
             case (4):
             case (6):
@@ -25,20 +39,7 @@ public class DaysInMonth {
                 System.out.println("invalid date");
 
                 }
-        if (year > 0)  {
-            if (year % 100== 0) {
-                if (year % 400 == 0) {
-                    System.out.println("leap");
-                }else {
-                    System.out.println("not leap");
-                }
-            } else if (year % 4== 0) {
-                System.out.println("leap");
-            } else {
-                System.out.println("not leap");
-        }
-        } else{
-            System.out.println("invalid date");
-        }
+
+
 }
     }
